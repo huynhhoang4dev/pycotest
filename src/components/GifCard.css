@@ -1,0 +1,12 @@
+.padding5 {
+     padding: 5px;
+}
+.card-body {
+     padding: 0px;
+}
+.tag {
+     padding: 0px;
+     position: relative;
+     float: left;
+     width: 25%
+}
