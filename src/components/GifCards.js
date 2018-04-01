@@ -1,5 +1,7 @@
+import './GifCards.css'
+
 import React from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Link } from 'react-router-dom'
 
 import GifCard from './GifCard'
 import store from './../Store'
@@ -8,9 +10,11 @@ import GifCardContainer from './../containers/GifCardContainer'
 import GifPagination from './GifPagination'
 import GifShow from './GifShow'
 
-const GifCards = ({gifcards=[], pagination, history, match}) => {
+const GifCards = ({gifcards=[], pagination, history, match, location}) => {
+    console.log('MATCH', match)
     console.log('HISTORY', history)
-
+    console.log('LOCATION', location)
+    console.log(gifcards)
     return (
         <div className="container">
             <div className="row">
@@ -18,7 +22,7 @@ const GifCards = ({gifcards=[], pagination, history, match}) => {
                     gifcards.map(
                         gifcard => <GifCard
                             key={gifcard.id}
-                            gifImages={gifcard.images.original}
+                            gifImages={gifcard}
                         />
                     )
                 }
@@ -26,7 +30,9 @@ const GifCards = ({gifcards=[], pagination, history, match}) => {
             <div className="row">
                 <GifPagination pagination={pagination} />
             </div>
-            {/* <Route path={math.url + '/omg'} component={GifShow} /> */}
+            <Route 
+                path={match.url + '/:pageID'}
+            />
         </div>
     )
 }

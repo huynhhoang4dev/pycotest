@@ -1,10 +1,26 @@
 import React from 'react'
+import './GifShow.css'
 
-const GifShow = ({match}) => {
-     console.log('MATCH', match)
+const GifShow = ({match, history, location, gifInfo, hideGif}) => {
 
-    
-     return <div>{match}FUVK</div>
+     console.log('MATCH', match.params.imageId)
+     return (
+          <div 
+               onClick={
+                    () => {
+                         hideGif()
+                         history.goBack()
+                    }
+               }
+          >
+               <img
+                    className="img-show"
+                    // src={gifInfo.gifUrl} 
+                    src={`https://media2.giphy.com/media/${match.params.imageId}/giphy.gif`}
+               />
+          </div>
+     )
+          
      
 }
 

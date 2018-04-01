@@ -8,7 +8,7 @@ import {
 } from './../constants/actionTypes'
 
 const initialModalState = {
-    isShow: false,
+    gifId: '',
     gifUrl: ''
 }
 
@@ -28,7 +28,7 @@ const initialGifsState = {
 function modal(state=initialModalState, action) {
     switch (action.type) {
         case SHOW_IMAGE:
-            return {...state, isShow: true, gifUrl: action.gifUrl }
+            return {...state, gifId: action.gifId, gifUrl: action.gifUrl }
         case HIDE_IMAGE:
             return initialModalState
         default:

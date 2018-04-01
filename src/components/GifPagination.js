@@ -145,7 +145,7 @@ const PageButton = ({type, currentPage, page_count}) => {
                 {/* <a className="page-link" href={"page/" + page.pageId} tabIndex="-1">{page.displayValue}</a> */}
           
                 <Link to={"/page/" + page.pageId}>
-                    <button type="button" className={"btn " + (page.isDisabled ? ' disabled ' : '  ') + (page.isActive ? ' btn-info ' : '')} >
+                    <button type="button" className={"btn " + (page.isDisabled ? ' disabled ' : '  ')} >
                         {page.displayValue}
                     </button>
                 </Link>

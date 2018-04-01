@@ -1,4 +1,5 @@
 import { connect } from 'react-redux'
+import { withRouter } from 'react-router-dom'
 import GifCards from './../components/GifCards'
 
 const mapStateToProps = (state, ownProps) => {
@@ -9,8 +10,8 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 
-const GifCardsContainer = connect(
+const GifCardsContainer = withRouter(connect(
     mapStateToProps
-)(GifCards)
+)(GifCards))
 
 export default GifCardsContainer

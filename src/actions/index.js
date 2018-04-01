@@ -28,14 +28,14 @@ export const getGifsSuccess = ({data, pagination, meta}) => ({
     meta
 })
 
-export const showGif = (gifUrl) => ({
-    isShow: true,
+export const showGif = ({gifId, gifUrl}) => ({
+    type: SHOW_IMAGE,
+    gifId,
     gifUrl
 })
 
 export const hideGif = () => ({
-    isShow: false,
-    gifUrl: ''
+    type: HIDE_IMAGE
 })
 
 
