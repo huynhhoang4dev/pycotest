@@ -1,9 +1,9 @@
 import React from 'react'
 import './GifTag.css'
 
-const GifTag = ({tagtype, tagvalue}) => (
+const GifTag = ({type, tagvalue}) => (
     <div className="col-sm-3 col-md-3 col-lg-3 col-xl-3 tag">
-        <i className="icon-tag"></i>{tagvalue}
+        <i className={type}></i>{tagvalue}
     </div>
 )
 

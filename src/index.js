@@ -5,12 +5,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 import App from './App';
 import GifShowContainer from './containers/GifShowContainer'
-import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'react-redux';
 import store from './Store'
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-import GifCardsContainer from './containers/GifCardsContainer'
 
 
 
@@ -29,5 +27,4 @@ ReactDOM.render(
         </Router>
     </Provider>, 
     appRoot);
-// registerServiceWorker();
 

@@ -8,15 +8,15 @@ const GifPagination = (pagination) => {
     let currentPage = offset + 1
     let pageCount = Math.ceil(total_count / 20)
     return (
-        <nav aria-label="...">
-            <ul className="pagination">
+        
+            <ul className="nav justify-content-center">
                 <PageButton type="first_page" currentPage={currentPage} page_count={pageCount} />
                 <PageButton type="prev_page" currentPage={currentPage} page_count={pageCount} />
                 <PageButton type="active_page" currentPage={currentPage} page_count={pageCount} />
                 <PageButton type="next_page" currentPage={currentPage} page_count={pageCount} />
                 <PageButton type="latest_page" currentPage={currentPage} page_count={pageCount} />
             </ul>
-        </nav>
+        
 
     )
 }
@@ -29,9 +29,6 @@ const PageButton = ({type, currentPage, page_count}) => {
         isActive: false,
         pageId: 1
     }
-
-    let active = false
-
     switch (type) {
         case 'first_page': 
             if(page_count === 1) {
@@ -141,7 +138,7 @@ const PageButton = ({type, currentPage, page_count}) => {
     if(page.isShow) {
         return (
             // <li className={"page-item active " + (page.isDisabled ? 'disabled' : '  ') + (page.isActive ? ' active ' : '') }>
-            <li>
+            <li className="nav-item">
                 {/* <a className="page-link" href={"page/" + page.pageId} tabIndex="-1">{page.displayValue}</a> */}
           
                 <Link to={"/page/" + page.pageId}>

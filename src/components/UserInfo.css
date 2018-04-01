@@ -1,0 +1,17 @@
+.user {
+     
+     font-weight:bold;
+     color:#36b8f9;
+     background-color: #f4f4f4;
+     margin-top: 5px;
+     margin-bottom: 5px;
+}
+.avatar {
+     display: inline-block;
+     width: auto;
+     height: auto;
+     width:20px;
+     height:20px;
+     border-radius: 50%;
+     margin: 0 5px;
+}

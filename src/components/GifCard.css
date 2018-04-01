@@ -1,8 +1,16 @@
+.card {
+     background: none;
+     border: none;
+}
+.card-display {
+     border-radius: 3px;
+     background: white;
+}
 .padding5 {
      padding: 5px;
 }
 .card-body {
-     padding: 0px;
+     padding-top: 5px;
 }
 .tag {
      padding: 0px;
